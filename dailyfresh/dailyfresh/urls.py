@@ -16,7 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url,include
+# from df_goods import search_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^user/',include('df_user.urls'))
+    url(r'^user/',include('df_user.urls')),
+    url(r'^tinymce/',include('tinymce.urls')),
+    url(r'^',include('df_goods.urls')),
+    url(r'^cart/',include('df_cart.urls')),
+    url(r'^order/',include('df_order.urls')),
+
+    # url(r'^search/', search_views.MySeachView(), name='haystack_search'),
 ]

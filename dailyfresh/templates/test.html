@@ -7,12 +7,20 @@
         function checkUser() {
             alert("aaa");
         }
+        $(function () {
+            bbb = 123;
+            return aClick(bbb)
+        });
+        function aClick(bbb) {
+            alert(bbb);
+        }
     </script>
 </head>
 <body>
 <form onsubmit="return checkUser()">
     <input type="text" name="name"><br>
     <li class="aaa"><input type="submit"></li>
+    <li> <a href="javascript:void(0)" onclick="aClick()">提交</a></li>
 </form>
 </body>
 </html>
